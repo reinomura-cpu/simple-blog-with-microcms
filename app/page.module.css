@@ -1,0 +1,60 @@
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+}
+
+.section {
+  margin-bottom: 4rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* グリッドの設定 */
+.gridVertical, .gridHorizontal, .gridImages {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card iframe, .card img {
+  width: 100%;
+  border-radius: 12px;
+  background: #000;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 比率の調整 */
+.gridVertical iframe { aspect-ratio: 9 / 16; }
+.gridHorizontal iframe { aspect-ratio: 16 / 9; }
+.gridImages img { aspect-ratio: 1 / 1; object-fit: cover; }
+
+.card p {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+}
