@@ -1,36 +1,35 @@
 .main {
-  padding: 2rem;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-  color: #1a1a1a;
-}
-
-.section {
-  margin-bottom: 4rem;
-  border-top: 1px solid #eee;
-  padding-top: 2rem;
-}
-
-.section h2 {
-  margin-bottom: 1.5rem;
-  color: #666;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 60px;
   letter-spacing: 0.1em;
 }
 
-/* グリッドの設定 */
+.section {
+  margin-bottom: 80px;
+}
+
+.heading {
+  font-size: 1.2rem;
+  border-left: 4px solid #000;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* 共通グリッド設定 */
 .gridVertical, .gridHorizontal, .gridImages {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .card {
@@ -40,21 +39,19 @@
 
 .card iframe, .card img {
   width: 100%;
-  border-radius: 12px;
-  background: #000;
+  border-radius: 8px;
+  background-color: #f0f0f0;
   border: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* 比率の調整 */
+/* 動画の比率固定 */
 .gridVertical iframe { aspect-ratio: 9 / 16; }
 .gridHorizontal iframe { aspect-ratio: 16 / 9; }
 .gridImages img { aspect-ratio: 1 / 1; object-fit: cover; }
 
-.card p {
+.workTitle {
   margin-top: 15px;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  font-size: 0.95rem;
-  color: #333;
 }
