@@ -1,4 +1,4 @@
-import { client } from "../libs/client";
+import { client } from "@/libs/client";
 import styles from "./page.module.css";
 
 export default async function Home() {
@@ -33,7 +33,7 @@ export default async function Home() {
       </section>
 
       {/* YouTube セクション */}
-      <section className={styles.section}>
+      <section className={section.section}>
         <h2 className={styles.heading}>YOUTUBE</h2>
         <div className={styles.gridHorizontal}>
           {youtube.map((work: any) => (
