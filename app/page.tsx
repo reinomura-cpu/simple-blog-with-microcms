@@ -2,11 +2,11 @@ import { client } from "../libs/microcms";
 import styles from "./page.module.css";
 
 export default async function Home() {
-  // 1. microCMSから「works」という名前のデータを取得
+  // 1. microCMSからデータを取得
   const data = await client.get({ endpoint: "works" });
   const works = data.contents;
 
-  // 2. カテゴリ名（microCMSの設定）と完全に一致させて振り分け
+  // 2. カテゴリごとに振り分け
   const reels = works.filter((w: any) => w.category?.includes("SNSリール（縦動画）"));
   const youtube = works.filter((w: any) => w.category?.includes("Youtube（横動画）"));
   const ads = works.filter((w: any) => w.category?.includes("静止画広告"));
